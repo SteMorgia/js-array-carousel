@@ -17,8 +17,9 @@ next.addEventListener("click",
         itemList[slideAttiva].classList.add('show');
     }
 )
-if (i = 0) {
-    prev.classList.add('hide');
+if (slideAttiva == 4) {
+    console.log(slideAttiva);
+    next.classList.add('hide');
 }
 
 const prev = document.querySelector('.prev');
@@ -29,3 +30,9 @@ prev.addEventListener("click",
         itemList[slideAttiva].classList.add('show');
     }
 )
+if (slideAttiva == 0) {
+    console.log(slideAttiva);
+    prev.classList.add('hide');
+} else {
+    prev.classList.remove('hide');
+}
