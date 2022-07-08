@@ -15,12 +15,21 @@ next.addEventListener("click",
         itemList[slideAttiva].classList.remove('show');
         slideAttiva++;
         itemList[slideAttiva].classList.add('show');
+        console.log(slideAttiva);
+        if (slideAttiva == 4) {
+            console.log(slideAttiva);
+            next.classList.add('hide');
+        } else {
+            next.classList.remove('hide');        
+        }
+        if (slideAttiva == 0) {
+            prev.classList.add('hide');
+        } else {
+            prev.classList.remove('hide');
+        }
     }
 )
-if (slideAttiva == 4) {
-    console.log(slideAttiva);
-    next.classList.add('hide');
-}
+
 
 const prev = document.querySelector('.prev');
 prev.addEventListener("click",
@@ -28,11 +37,18 @@ prev.addEventListener("click",
         itemList[slideAttiva].classList.remove('show');
         slideAttiva--;
         itemList[slideAttiva].classList.add('show');
+        if (slideAttiva == 0) {
+            prev.classList.add('hide');
+        } else {
+            prev.classList.remove('hide');
+        }
+        if (slideAttiva == 4) {
+            console.log(slideAttiva);
+            next.classList.add('hide');
+        } else {
+            next.classList.remove('hide');        
+        }
     }
 )
-if (slideAttiva == 0) {
-    console.log(slideAttiva);
-    prev.classList.add('hide');
-} else {
-    prev.classList.remove('hide');
-}
+
+
